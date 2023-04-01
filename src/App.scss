@@ -1,0 +1,36 @@
+@import "./styles/variables.scss";
+
+*{
+	box-sizing: border-box;
+	&::after,
+	&::before{
+		box-sizing: border-box;
+	}
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: $primaryFm;
+	background-image: url(./assets/bg-image.jpg);
+	background-position-y: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.wrapper {
+	max-width: 1140px;
+	// height: 100vh;
+	margin: 0 auto;
+	padding: 0 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+}

@@ -1,0 +1,86 @@
+@import "../../styles/variables.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 46px;
+}
+.logo {
+	margin-right: 50px;
+  flex: 1;
+  p {
+    font-weight: 300;
+    font-size: 10px;
+    font-family: $secondaryFm;
+    margin: 0;
+    line-height: 12px;
+    color: $white;
+    width: 145px;
+  }
+  a{
+    text-decoration: none;
+  }
+}
+
+.nav {
+  flex: auto;
+  display: flex;
+  list-style: none;
+	// justify-content: center;
+  margin: 0;
+  padding: 0;
+  .navItem:not(:last-child) {
+    margin-right: 30px;
+  }
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.contacts {
+  display: flex;
+  a {
+		color: $white;
+    text-decoration: none;
+  }
+  .messengers {
+		margin-left: 47px;
+    a:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .header{
+    .contacts {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .header{
+    .nav {
+      justify-content: flex-end;
+    }
+    .contacts {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .header{
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding-top: 20px;
+    .logo {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}

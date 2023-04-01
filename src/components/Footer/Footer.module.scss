@@ -1,0 +1,103 @@
+@import "../../styles/variables.scss";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+
+  .title {
+    color: #656566;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .companyList {
+    .companyItem {
+      color: $white;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .menuListWrap {
+    display: flex;
+    .menuList {
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+      .meniItem {
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+        a {
+          color: $white;
+          text-decoration: none;
+          font-weight: 400;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .contactsWrapper {
+    .title {
+      text-align: right;
+    }
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      & a {
+        color: $white;
+        text-decoration: none;
+        margin-bottom: 20px;
+      }
+      .contactIcons {
+        font-weight: 400;
+        font-size: 16px;
+        a:not(:first-child) {
+          margin-left: 10px;
+        }
+      }
+      .address {
+        color: $white;
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 50px;
+      }
+      .welbex {
+        color: $white;
+        p {
+          margin: 0;
+          text-align: right;
+          &:first-child {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .footer {
+    flex-direction: column;
+    .contactsWrapper {
+      .title {
+        text-align: left;
+        font-weight: 700;
+        font-size: 12px;
+      }
+      .contacts {
+        align-items: flex-start;
+        .welbex {
+          p {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
